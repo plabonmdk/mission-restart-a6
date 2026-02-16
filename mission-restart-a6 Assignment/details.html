@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="./style.css">
-    <title>Product Details</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - SwiftCart</title>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-         <!-- navbar -->
- <section  >
+<body class="bg-gray-100">
 
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-600">
+      <a href="./index.html">SwiftCart</a>
+    </h1>
 
+    <ul class="hidden md:flex space-x-8 text-gray-600 font-medium">
+      <li><a href="./index.html" class="hover:text-indigo-600 transition">Home</a></li>
+      <li><a href="./all-products.html" class="hover:text-indigo-600 transition">Products</a></li>
+      <li><a href="#" class="hover:text-indigo-600 transition">About</a></li>
+      <li><a href="#" class="hover:text-indigo-600 transition">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center space-x-4">
+      <i class="fa-solid fa-cart-shopping text-gray-700 text-lg cursor-pointer"></i>
+      <button id="menuBtn" class="md:hidden text-2xl text-gray-700">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white px-4 sm:px-6 pb-4">
+    <ul class="flex flex-col space-y-4 text-gray-600 font-medium">
+      <li><a href="./index.html" class="hover:text-indigo-600">Home</a></li>
+      <li><a href="./all-products.html" class="hover:text-indigo-600">Products</a></li>
+      <li><a href="#" class="hover:text-indigo-600">About</a></li>
+      <li><a href="#" class="hover:text-indigo-600">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<section class="py-16 bg-gray-100 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="productDetails" class="bg-white p-6 sm:p-10 rounded-3xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-10">
       
-      <h1 class="text-2xl font-bold text-indigo-600">
-        <a href="./index.html">SwiftCart</a>
-      </h1>
-
       
-      <ul class="hidden md:flex space-x-8 text-gray-600 font-medium">
-        <li><a href="./index.html" class="hover:text-indigo-600 transition">Home</a></li>
-        <li><a href="./all-products.html" class="hover:text-indigo-600 transition">Products</a></li>
-        <li><a href="#" class="hover:text-indigo-600 transition">About</a></li>
-        <li><a href="#" class="hover:text-indigo-600 transition">Contact</a></li>
-      </ul>
-
-      
-      <div class="flex items-center space-x-6">
-        <i class="fa-solid fa-cart-shopping text-gray-700 text-lg cursor-pointer"></i>
-
-        
-        <button id="menuBtn" class="md:hidden text-2xl text-gray-700">
-          ☰
-        </button>
+      <div class="flex justify-center items-center">
+        <span class="loading loading-spinner loading-xl text-indigo-600"></span>
       </div>
-    </div>
 
-    
-    <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-4">
-      <ul class="flex flex-col space-y-4 text-gray-600 font-medium">
-        <li><a href="./index.html" class="text-indigo-600">Home</a></li>
-        <li><a href="./all-products.html" class="hover:text-indigo-600">Products</a></li>
-        <li><a href="#" class="hover:text-indigo-600">About</a></li>
-        <li><a href="#" class="hover:text-indigo-600">Contact</a></li>
-      </ul>
-    </div>
-
-  </nav>
-
- </section> 
- <!-- details page -->
- <section class="py-16 bg-gray-100 min-h-screen">
-  <div class="max-w-7xl mx-auto px-6">
-    <div id="productDetails" 
-         class="bg-white p-8 rounded-2xl shadow-lg grid md:grid-cols-2 gap-10">
       
-      
-      <div class="col-span-2 text-center">
-        <span class="loading loading-spinner loading-lg text-indigo-600"></span>
+      <div class="flex flex-col justify-center space-y-6">
+        <h2 class="text-3xl font-bold text-gray-800 text-center md:text-left">Loading Product...</h2>
+        <p class="text-gray-600 text-center md:text-left">Please wait while we fetch the product details.</p>
+        <div class="flex justify-center md:justify-start gap-4">
+          <button class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+            Add to Cart
+          </button>
+          <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+            Wishlist
+          </button>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
- <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-slate-900 text-gray-300">
-  <div class="max-w-7xl mx-auto px-6 py-14">
-    
-    
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      
       
       <div>
         <h2 class="text-2xl font-bold text-indigo-500"><a href="./index.html">SwiftCart</a></h2>
@@ -84,11 +88,8 @@
         </p>
       </div>
 
-      
       <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">
-          Quick Links
-        </h3>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Quick Links</h3>
         <ul class="mt-4 space-y-3 text-sm">
           <li><a href="#" class="hover:text-indigo-400 transition">Home</a></li>
           <li><a href="#" class="hover:text-indigo-400 transition">Products</a></li>
@@ -97,11 +98,8 @@
         </ul>
       </div>
 
-      
       <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">
-          Support
-        </h3>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Support</h3>
         <ul class="mt-4 space-y-3 text-sm">
           <li><a href="#" class="hover:text-indigo-400 transition">FAQ</a></li>
           <li><a href="#" class="hover:text-indigo-400 transition">Shipping</a></li>
@@ -110,54 +108,39 @@
         </ul>
       </div>
 
-      
       <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">
-          Subscribe to our newsletter
-        </h3>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Subscribe to our newsletter</h3>
         <p class="mt-4 text-sm text-gray-400">
           The latest news, articles, and resources, sent to your inbox weekly.
         </p>
-
-        <div class="mt-4 flex">
-          <input 
-            type="email" 
-            placeholder="Enter your email"
-            class="w-full px-4 py-2 rounded-l-md bg-slate-800 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-r-md text-white text-sm font-medium transition">
-            Subscribe
-          </button>
+        <div class="mt-4 flex flex-col sm:flex-row gap-2 sm:gap-0">
+          <input type="email" placeholder="Enter your email" class="w-full sm:flex-1 px-4 py-2 rounded-l-md bg-slate-800 border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+          <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-r-md text-white text-sm font-medium transition">Subscribe</button>
         </div>
       </div>
 
     </div>
 
-    
     <div class="mt-12 border-t border-slate-700 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-      
       <p>© 2025 SwiftCart, Inc. All rights reserved.</p>
-
-      
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-indigo-400 transition">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="hover:text-indigo-400 transition">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="hover:text-indigo-400 transition">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="hover:text-indigo-400 transition">
-          <i class="fab fa-linkedin"></i>
-        </a>
+        <a href="#" class="hover:text-indigo-400 transition"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-indigo-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-indigo-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-indigo-400 transition"><i class="fab fa-linkedin"></i></a>
       </div>
-
     </div>
-
   </div>
 </footer>
+
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 <script src="./script/details.js"></script>
 </body>
 </html>
