@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Products - SwiftCart</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./style.css">
+    <title>Product Details</title>
 </head>
-<body class="bg-gray-100">
-          <!-- navbar -->
+<body>
+         <!-- navbar -->
  <section  >
 
   <nav class="bg-white shadow-md">
@@ -48,38 +52,23 @@
 
   </nav>
 
- </section>
+ </section> 
+ <!-- details page -->
+ <section class="py-16 bg-gray-100 min-h-screen">
+  <div class="max-w-7xl mx-auto px-6">
+    <div id="productDetails" 
+         class="bg-white p-8 rounded-2xl shadow-lg grid md:grid-cols-2 gap-10">
+      
+      
+      <div class="col-span-2 text-center">
+        <span class="loading loading-spinner loading-lg text-indigo-600"></span>
+      </div>
 
-  <!-- all product -->
-  <section class="py-12 max-w-7xl mx-auto text-center">
-    <h1 class="text-4xl font-bold">Our Products</h1>
-    <section class="py-12 text-center">
-  
-
-  
-  <div class="mb-8 flex justify-center gap-4" id="categoryContainer">
-    <button onclick="loadCategory('all')" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">All</button>
-    <button onclick="loadCategory('electronics')" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Electronics</button>
-    <button onclick="loadCategory('jewelery')" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Jewelery</button>
-    <button onclick="loadCategory('men\'s clothing')" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Men's Clothing</button>
-    <button onclick="loadCategory('women\'s clothing')" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Women's Clothing</button>
-    
-  </div>
-
-  <div id="productContainer" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    
+    </div>
   </div>
 </section>
 
-  </section>
-
-  
-  <section class="max-w-7xl mx-auto px-6 pb-16">
-    <div id="productContainer"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    </div>
-  </section>
-  <!-- Footer -->
+ <!-- Footer -->
 <footer class="bg-slate-900 text-gray-300">
   <div class="max-w-7xl mx-auto px-6 py-14">
     
@@ -101,8 +90,8 @@
           Quick Links
         </h3>
         <ul class="mt-4 space-y-3 text-sm">
-          <li><a href="./index.html" class="hover:text-indigo-400 transition">Home</a></li>
-          <li><a href="./all-products.html" class="hover:text-indigo-400 transition">Products</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition">Products</a></li>
           <li><a href="#" class="hover:text-indigo-400 transition">About</a></li>
           <li><a href="#" class="hover:text-indigo-400 transition">Contact</a></li>
         </ul>
@@ -169,7 +158,6 @@
 
   </div>
 </footer>
-
-  <script src="./script/index.js"></script>
+<script src="./script/details.js"></script>
 </body>
 </html>
