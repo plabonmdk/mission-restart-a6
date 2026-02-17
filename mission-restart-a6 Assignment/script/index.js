@@ -48,7 +48,8 @@ const displayProducts = (products) => {
           <button class="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
             <a href="./details.html?id=${product.id}">Details</a>
           </button>
-          <button class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
+          <button 
+          class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
             Add
           </button>
         </div>
@@ -98,9 +99,11 @@ const displayFeaturedProducts = (products) => {
           <button class="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
             <a href="./details.html?id=${product.id}">Details</a>
           </button>
-          <button class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
-            Add
+          <button >
+          class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">
+          Add
           </button>
+
         </div>
       </div>
     `;
@@ -111,5 +114,6 @@ const displayFeaturedProducts = (products) => {
 
 
 loadFeaturedProducts();
+
 
 
